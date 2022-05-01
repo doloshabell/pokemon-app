@@ -21,8 +21,8 @@ function PokemonList() {
   const Loading = () => {
     return (
       <>
-        <div className="app-container">
-          <h1>Loading....</h1>
+        <div className="app-container mt-5">
+          <h1 className="mt-3">Loading....</h1>
           <div className="pokemon-container">
             <div className="all-container">
               <div className="thumb-container rock">
@@ -58,8 +58,8 @@ function PokemonList() {
 
   if (pokemons.length > 0) {
     return (
-      <div className="app-container">
-        <h1>Pokemon Evolution</h1>
+      <div className="app-container mt-4">
+        <h1 className="mt-5">Pokemon List</h1>
         <div className="pokemon-container">
           <div className="all-container">
             {pokemons.slice(0, count).map((item) =>
