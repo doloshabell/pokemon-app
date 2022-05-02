@@ -54,11 +54,11 @@ function PokemonList() {
         </div>
       </>
     )
-  }
+  };
 
-  if (pokemons.length > 0) {
+  const ShowPokemon = () => {
     return (
-      <div className="app-container mt-4">
+      <div className="app-container mt-5">
         <h1 className="mt-5">Pokemon List</h1>
         <div className="pokemon-container">
           <div className="all-container">
@@ -75,13 +75,13 @@ function PokemonList() {
         </div>
       </div>
     )
-  } else {
-    return (
-      <>
-        <Loading />
-      </>
-    )
   }
+  
+  return (
+    <>
+      {pokemons.length === 0 ? <Loading /> : <ShowPokemon />}
+    </>
+  )
 }
 
 export default PokemonList;
